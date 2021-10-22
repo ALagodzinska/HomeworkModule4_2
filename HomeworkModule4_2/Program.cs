@@ -55,7 +55,6 @@ namespace HomeworkModule4_2
                 catch
                 {
                     InvalidInput();
-                    Console.ReadLine();
                 }
         }
 
@@ -80,15 +79,15 @@ namespace HomeworkModule4_2
                 }
                 else
                 {
-                    InvalidInput();
-                    Console.ReadLine();
+                    InvalidInput();                    
                 }
                 
             }
 
         static void InvalidInput()
             {
-                Console.WriteLine("Invalid input.Try again.");                            
+                Console.WriteLine("Invalid input.Try again.");
+                Console.ReadLine();
             }
 
         
