@@ -62,8 +62,10 @@ namespace HomeworkModule4_2
             {
                 Console.WriteLine("Enter a side:");
                 string inputSide = Console.ReadLine();
-                if (double.TryParse(inputSide, out double side)) 
+                try
                 {
+                    double side = Convert.ToDouble(inputSide);
+
                     if (side == 0)
                     {
                         Console.WriteLine("Can't calculate a square area.");
@@ -75,22 +77,19 @@ namespace HomeworkModule4_2
                         Console.WriteLine($"Calculated square area: {squareArea}");
                         Console.ReadLine();
                     }
-                    
+
                 }
-                else
+                catch
                 {
-                    InvalidInput();                    
-                }
-                
+                    InvalidInput();
+                }                               
             }
 
         static void InvalidInput()
             {
                 Console.WriteLine("Invalid input.Try again.");
                 Console.ReadLine();
-            }
-
-        
+            }        
         }
     }
 }
